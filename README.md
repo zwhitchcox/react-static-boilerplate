@@ -1,9 +1,9 @@
-# React Static Boilerplate ![status](https://img.shields.io/badge/status-early%20preview-orange.svg?style=flat-square)
+# <%= name %>
 
-> A static website starter kit powered by [React.js](http://facebook.github.io/react/)
+> A static website powered by [React.js](http://facebook.github.io/react/)
 > and [Webpack](http://webpack.github.io/).
 
-Join [#react-static-boilerplate](https://gitter.im/koistya/react-static-boilerplate) chatroom on Gitter to stay up to date.
+**Note**: *This project is based on [react-static-boilerplate](https://github.com/koistya/react-static-boilerplate).*
 
 ### Features
 
@@ -15,20 +15,6 @@ Join [#react-static-boilerplate](https://gitter.im/koistya/react-static-boilerpl
 &nbsp; &nbsp; ✓ Bundling and optimization with [Webpack](http://webpack.github.io/)<br>
 &nbsp; &nbsp; ✓ [Code-splitting](https://github.com/webpack/docs/wiki/code-splitting) and async chunk loading<br>
 &nbsp; &nbsp; ✓ Easy deployment to [GitHub Pages](https://pages.github.com/) or [Amazon S3](http://davidwalsh.name/hosting-website-amazon-s3)<br>
-
-### Getting Started
-
-Just clone the repo, install Node.js modules and run `npm start`:
-
-```
-$ git clone -o react-static-boilerplate -b master --single-branch \
-      https://github.com/koistya/react-static-boilerplate.git MyApp
-$ cd MyApp
-$ npm install
-$ npm start
-```
-
-Then open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
 ### Directory Layout
 
@@ -65,17 +51,6 @@ $ npm run build -- --release    # Builds the project in release mode
 $ npm run deploy                # Deploys the project to GitHub Pages
 ```
 
-### How to Update
-
-You can always fetch and merge the recent changes from this repo back into
-your own project:
-
-```shell
-$ git checkout master
-$ git fetch react-static-boilerplate
-$ git merge react-static-boilerplate/master
-$ npm install
-```
 ### Related Projects
 
  * [React Starter Kit](https://github.com/kriasoft/react-starter-kit)
@@ -91,4 +66,4 @@ $ npm install
  * [Learn ES6](https://babeljs.io/docs/learn-es6/), [ES6 Features](https://github.com/lukehoban/es6features#readme)
 
 ---
-Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/koistya/react-static-boilerplate/graphs/contributors) &nbsp;|&nbsp; MIT License
+Copyright (c) <%= author %>.&nbsp; All rights reserved.
