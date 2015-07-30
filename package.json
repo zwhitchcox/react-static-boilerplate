@@ -1,0 +1,46 @@
+{
+  "name": "generator-react-static",
+  "version": "0.1.0",
+  "description": "Generate a static website from React.js components",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "https://github.com/koistya/react-static-boilerplate/tree/yeoman-generator",
+  "author": "Konstantin Tarkus <hello@tarkus.me>",
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app",
+    "react-static-boilerplate"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "boilerplate",
+    "component",
+    "front-end",
+    "javascript",
+    "library",
+    "babel",
+    "es6",
+    "es7",
+    "es2015",
+    "esnext",
+    "react",
+    "reactjs",
+    "routing",
+    "router"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "glob": "^5.0.14",
+    "lodash": "^3.10.0",
+    "npm-name": "^1.1.1",
+    "yeoman-generator": "^0.20.2",
+    "yosay": "^1.0.5"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "mockery": "^1.4.0"
+  }
+}

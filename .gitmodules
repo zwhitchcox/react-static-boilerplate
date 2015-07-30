@@ -1,0 +1,8 @@
+[submodule "babel-starter-kit"]
+	path = babel-starter-kit
+	url = https://github.com/kriasoft/babel-starter-kit.git
+	branch = yeoman
+[submodule "react-static-boilerplate"]
+	path = react-static-boilerplate
+	url = https://github.com/koistya/react-static-boilerplate.git
+	branch = yeoman
