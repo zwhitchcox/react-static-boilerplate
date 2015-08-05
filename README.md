@@ -15,6 +15,7 @@
 &nbsp; &nbsp; ✓ Bundling and optimization with [Webpack](http://webpack.github.io/)<br>
 &nbsp; &nbsp; ✓ [Code-splitting](https://github.com/webpack/docs/wiki/code-splitting) and async chunk loading<br>
 &nbsp; &nbsp; ✓ Easy deployment to [GitHub Pages](https://pages.github.com/) or [Amazon S3](http://davidwalsh.name/hosting-website-amazon-s3)<br>
+&nbsp; &nbsp; ✓ [Yeoman](http://yeoman.io/) generator ([generator-react-static](https://www.npmjs.com/package/generator-react-static))<br>
 
 ### Directory Layout
 
@@ -47,7 +48,6 @@ $ npm test
 ### How to Deploy
 
 ```shell
-$ npm run build -- --release    # Builds the project in release mode
 $ npm run deploy                # Deploys the project to GitHub Pages
 ```
 
