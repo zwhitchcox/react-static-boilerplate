@@ -5,13 +5,11 @@
  */
 
 import path from 'path';
-import minimist from 'minimist';
 import webpack from 'webpack';
 import merge from 'lodash/object/merge';
 
-const argv = minimist(process.argv.slice(2));
-const DEBUG = !argv.release;
-const VERBOSE = !!argv.verbose;
+const DEBUG = !process.argv.includes('release');
+const VERBOSE = process.argv.includes('verbose');
 const WATCH = global.watch;
 const SCRIPT_LOADERS = WATCH ? ['react-hot', 'babel'] : ['babel'];
 const AUTOPREFIXER_BROWSERS = [
@@ -88,19 +86,24 @@ const config = {
 
 // Configuration for the client-side bundle
 const appConfig = merge({}, config, {
-  entry: (WATCH ? [
-    'webpack/hot/dev-server',
-    'webpack-hot-middleware/client'
-  ] : []).concat([
-      './src/js/app.js'
-    ]),
+  entry: [
+    ...(WATCH && ['webpack-hot-middleware/client']),
+    './src/js/app.js'
+  ],
   output: {
     filename: 'app.js'
   },
-  plugins: config.plugins.concat(WATCH ? [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ] : [])
+  plugins: [
+    ...config.plugins,
+    ...(!DEBUG && [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin({compress: {warnings: VERBOSE}}),
+      new webpack.optimize.AggressiveMergingPlugin()
+    ]),
+    ...(WATCH && [
+      new webpack.HotModuleReplacementPlugin()
+    ])
+  ]
 });
 
 // Configuration for server-side pre-rendering bundle
