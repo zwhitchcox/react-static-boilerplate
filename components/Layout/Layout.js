@@ -5,16 +5,18 @@
  */
 
 import React, { PropTypes } from 'react';
+import Navigation from '../Navigation';
 
 class Layout {
 
   static propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.element.isRequired,
   };
 
   render() {
     return (
       <div className="Layout">
+        <Navigation />
         {this.props.children}
       </div>
     );

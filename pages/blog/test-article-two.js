@@ -11,10 +11,10 @@ export default class {
   render() {
     return (
       <div>
-        <h1>Home Page</h1>
+        <h1>Test Article 2</h1>
         <p>Coming soon.</p>
       </div>
     );
   }
 
-};
+}

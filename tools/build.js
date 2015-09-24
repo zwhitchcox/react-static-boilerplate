@@ -6,6 +6,7 @@
 
 export default async () => {
   await require('./clean')();
+  await require('./copy')();
   const pages = await require('./pages')();
   await require('./bundle')({ pages });
   await require('./render')({ pages });

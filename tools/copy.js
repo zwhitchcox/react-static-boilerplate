@@ -4,11 +4,13 @@
  * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
  */
 
-import del from 'del';
-import fs from './lib/fs';
+import copy from './lib/copy';
 
+/**
+ * Copies static files such as robots.txt, favicon.ico to the
+ * output (build) folder.
+ */
 export default async () => {
-  console.log('clean');
-  await del(['build/*', '!build/.git'], { dot: true });
-  await fs.mkdir('build');
+  console.log('copy');
+  await copy('static', 'build');
 };

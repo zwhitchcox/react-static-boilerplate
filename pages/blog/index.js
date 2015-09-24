@@ -10,10 +10,10 @@ export default class {
 
   render() {
     return (
-      <ul className="Navigation" role="menu">
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/about">About</a></li>
-      </ul>
+      <div>
+        <h1>Blog</h1>
+        <p>Coming soon.</p>
+      </div>
     );
   }
 

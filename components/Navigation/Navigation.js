@@ -5,16 +5,17 @@
  */
 
 import React from 'react';
+import Link from '../Link';
 
 export default class {
 
   render() {
     return (
-      <div>
-        <h1>Blog</h1>
-        <p>Coming soon.</p>
-      </div>
+      <ul className="Navigation" role="menu">
+        <li><a href="/" onClick={Link.handleClick}>Home</a></li>
+        <li><a href="/about" onClick={Link.handleClick}>About</a></li>
+      </ul>
     );
   }
 
-};
+}
