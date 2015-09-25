@@ -1,6 +1,6 @@
 {
   "name": "generator-react-static",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Generate a static website from React.js components",
   "license": "MIT",
   "main": "app/index.js",
