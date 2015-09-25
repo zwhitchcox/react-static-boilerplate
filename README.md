@@ -10,7 +10,7 @@
 &nbsp; &nbsp; ✓ Generates static `.html` pages from [React](http://facebook.github.io/react/) components<br>
 &nbsp; &nbsp; ✓ Generates routes based on the list of files in the `/pages` folder<br>
 &nbsp; &nbsp; ✓ Next generation JavaScript with [Babel](https://github.com/babel/babel)<br>
-&nbsp; &nbsp; ✓ Next generation CSS with [postCSS](https://github.com/postcss/postcss) and [cssnext](http://cssnext.io/)<br>
+&nbsp; &nbsp; ✓ [Sass](http://sass-lang.com/) syntax for CSS via [postCSS](https://github.com/postcss/postcss) and [precss](https://github.com/jonathantneal/precss)<br>
 &nbsp; &nbsp; ✓ Development web server with [React Hot Loader](http://gaearon.github.io/react-hot-loader/) and [BrowserSync](http://www.browsersync.io)<br>
 &nbsp; &nbsp; ✓ Bundling and optimization with [Webpack](http://webpack.github.io/)<br>
 &nbsp; &nbsp; ✓ [Code-splitting](https://github.com/webpack/docs/wiki/code-splitting) and async chunk loading<br>
@@ -40,6 +40,20 @@
 │── package.json                # Dev dependencies and NPM scripts
 └── README.md                   # Project overview
 ```
+
+### Getting Started
+
+Just clone the repo, install Node.js modules and run `npm start`:
+
+```
+$ git clone -o react-static-boilerplate -b master --single-branch \
+      https://github.com/koistya/react-static-boilerplate.git MyApp
+$ cd MyApp
+$ npm install
+$ npm start
+```
+
+Then open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
 ### How to Test
 
