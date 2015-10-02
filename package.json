@@ -1,6 +1,6 @@
 {
   "name": "generator-react-static",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Generate a static website from React.js components",
   "license": "MIT",
   "main": "app/index.js",
@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "chalk": "^1.1.1",
-    "glob": "^5.0.14",
+    "glob": "^5.0.15",
     "lodash": "^3.10.1",
     "npm-name": "^1.1.1",
     "yeoman-generator": "^0.20.3",
