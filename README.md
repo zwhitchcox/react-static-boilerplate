@@ -46,7 +46,7 @@ If you'd like to get to know Yeoman better, check out the complete [Getting Star
 
 ## Support
 
- * [#babel-starter-kit](https://gitter.im/kriasoft/babel-starter-kit) on Gitter
+ * [#react-static-boilerplate](https://gitter.im/koistya/react-static-boilerplate) on Gitter
  * [@koistya](https://www.codementor.io/koistya) on Codementor
 
 ## License
