@@ -9,13 +9,15 @@ import webpack from 'webpack';
 import hygienistMiddleware from 'hygienist-middleware';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+import run from './run';
+import webpackConfig from './webpack.config';
 
 global.watch = true;
-const webpackConfig = require('./webpack.config')[0];
-const bundler = webpack(webpackConfig);
+const appWebpackConfig = webpackConfig[0];
+const bundler = webpack(appWebpackConfig);
 
-export default async () => {
-  await require('./build')();
+async function start() {
+  await run(require('./build').default);
 
   browserSync({
     server: {
@@ -27,10 +29,10 @@ export default async () => {
         webpackDevMiddleware(bundler, {
           // IMPORTANT: dev middleware can't access config, so we should
           // provide publicPath by ourselves
-          publicPath: webpackConfig.output.publicPath,
+          publicPath: appWebpackConfig.output.publicPath,
 
           // pretty colored output
-          stats: webpackConfig.stats,
+          stats: appWebpackConfig.stats,
 
           // for other settings see
           // http://webpack.github.io/docs/webpack-dev-middleware.html
@@ -48,4 +50,6 @@ export default async () => {
       'build/**/*.html',
     ],
   });
-};
+}
+
+export default start;

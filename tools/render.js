@@ -9,7 +9,6 @@ import { join, dirname } from 'path';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import Html from '../components/Html';
-import task from './lib/task';
 import fs from './lib/fs';
 
 const DEBUG = !process.argv.includes('release');
@@ -45,10 +44,12 @@ async function renderPage(page, component) {
   await fs.writeFile(file, html);
 }
 
-export default task(async function render() {
+async function render() {
   const pages = await getPages();
   const { route } = require('../build/app.node');
   for (const page of pages) {
     await route(page.path, renderPage.bind(undefined, page));
   }
-});
+}
+
+export default render;
