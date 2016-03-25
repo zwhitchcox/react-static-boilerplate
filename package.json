@@ -47,6 +47,7 @@
     "clean": "babel-node --eval \"require('./tools/clean')().catch(err => console.log(err.stack))\"",
     "build": "babel-node --eval \"require('./tools/build')().catch(err => console.log(err.stack))\"",
     "start": "babel-node --eval \"require('./tools/start')().catch(err => console.log(err.stack))\"",
-    "deploy": "babel-node --eval \"require('./tools/deploy')().catch(err => console.log(err.stack))\""
+    "deploy": "babel-node --eval \"require('./tools/deploy')().catch(err => console.log(err.stack))\"",
+    "postinstall": "node --eval \"// this is just a hack, don't mind me \n var fs=require('fs');fs.readFile('./node_modules/webpack-dev-middleware/middleware.js','utf8',function(a,b){if(a)return console.log(a);var c=b.replace(/req\\.path/g,'req.path || req.url');fs.writeFile('./node_modules/webpack-dev-middleware.js',c,'utf8',function(a){return a?console.log(a):void 0})});\""
   }
 }
